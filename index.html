@@ -30,13 +30,15 @@
 
       <fieldset class="checkCapo">
         <legend>Select capo:</legend>
+        <label><input type="radio" name="capo" value="no" checked>Without capo</label>
         <label><input type="radio" name="capo" value="yes">With capo</label>
-        <label><input type="radio" name="capo" value="no">Without capo</label>
-        <input type="number" for="fretNumber" id="fretNumber" min="0">
+        <input type="number" for="fretNumber" id="capoFret" min="0" value="0">
       </fieldset>
 
       <label for="fretNumber">Fret number</label>
-      <input type="number" for="fretNumber" id="fretNumber" min="0">
+      <input type="number" for="fretNumber" id="fretNumber" min="0" value="0">
+
+      <button class="btnTranslate">submit</button>
     </form>
   </div>
 
