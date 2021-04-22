@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>TabToPiano</title>
+</head>
+
+<body>
+  <div>
+    <form>
+      <fieldset class="keysRadio">
+        <legend>Select note:</legend>
+        <label><input type="radio" name="note" value="C">C</label>
+        <label><input type="radio" name="note" value="C#">C#</label>
+        <label><input type="radio" name="note" value="D">D</label>
+        <label><input type="radio" name="note" value="D#">D#</label>
+        <label><input type="radio" name="note" value="E">E</label>
+        <label><input type="radio" name="note" value="F">F</label>
+        <label><input type="radio" name="note" value="F#">F#</label>
+        <label><input type="radio" name="note" value="G">G</label>
+        <label><input type="radio" name="note" value="G#">G#</label>
+        <label><input type="radio" name="note" value="A">A</label>
+        <label><input type="radio" name="note" value="A#">A#</label>
+        <label><input type="radio" name="note" value="B">B</label>
+      </fieldset>
+
+      <fieldset class="checkCapo">
+        <legend>Select capo:</legend>
+        <label><input type="radio" name="capo" value="yes">With capo</label>
+        <label><input type="radio" name="capo" value="no">Without capo</label>
+        <input type="number" for="fretNumber" id="fretNumber" min="0">
+      </fieldset>
+
+      <label for="fretNumber">Fret number</label>
+      <input type="number" for="fretNumber" id="fretNumber" min="0">
+    </form>
+  </div>
+
+  <div>
+    <p>Key in piano: <span>A</span></p>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
