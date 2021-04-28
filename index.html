@@ -11,33 +11,78 @@
 
 <body>
   <div>
+
     <form>
-      <fieldset class="keysRadio">
-        <legend>Select note:</legend>
-        <label><input type="radio" name="note" value="C">C</label>
-        <label><input type="radio" name="note" value="C#">C#</label>
-        <label><input type="radio" name="note" value="D">D</label>
-        <label><input type="radio" name="note" value="D#">D#</label>
-        <label><input type="radio" name="note" value="E">E</label>
-        <label><input type="radio" name="note" value="F">F</label>
-        <label><input type="radio" name="note" value="F#">F#</label>
-        <label><input type="radio" name="note" value="G">G</label>
-        <label><input type="radio" name="note" value="G#">G#</label>
-        <label><input type="radio" name="note" value="A">A</label>
-        <label><input type="radio" name="note" value="A#">A#</label>
-        <label><input type="radio" name="note" value="B">B</label>
-      </fieldset>
+      <div class="radioDiv">
+        <h3>Select note:</h3>
+        <ul class="keysRadio">
+          <li>
+            <input type="radio" name="note" value="C" id="C">
+            <label for="C">C</label>
+          </li>
+          <li>
+            <input type="radio" name="note" value="C#" id="C#">
+            <label for="C#">C#</label>
+          </li>
+          <li>
+            <input type="radio" name="note" value="D" id="D">
+            <label for="D">D</label>
+          </li>
+          <li>
+            <input type="radio" name="note" value="D#" id="D#">
+            <label for="D#">D#</label>
+          </li>
+          <li>
+            <input type="radio" name="note" value="E" id="E">
+            <label for="E">E</label>
+          </li>
+          <li>
+            <input type="radio" name="note" value="F" id="F">
+            <label for="F">F</label>
+          </li>
+          <li>
+            <input type="radio" name="note" value="F#" id="F#">
+            <label for="F#">F#</label>
+          </li>
+          <li>
+            <input type="radio" name="note" value="G" id="G">
+            <label for="G">G</label>
+          </li>
+          <li>
+            <input type="radio" name="note" value="G#" id="G#">
+            <label for="G#">G#</label>
+          </li>
+          <li>
+            <input type="radio" name="note" value="A" id="A">
+            <label for="A">A</label>
+          </li>
+          <li>
+            <input type="radio" name="note" value="A#" id="A#">
+            <label for="A#">A#</label>
+          </li>
+          <li>
+            <input type="radio" name="note" value="B" id="B">
+            <label for="B">B</label>
+          </li>
+        </ul>
+      </div>
 
-      <fieldset class="checkCapo">
-        <legend>Select capo:</legend>
-        <label><input type="radio" name="capo" checked>Without capo</label>
-        <label><input type="radio" name="capo">With capo</label>
-        <input type="number" for="fretNumber" id="capoFret" min="0" value="0" disabled>
-      </fieldset>
-
-      <label for="fretNumber">Fret number</label>
+      <div class="radioDiv">
+        <h3>Select capo:</h3>
+        <ul class="checkCapo">
+          <li>
+            <input type="radio" name="capo" id="noCapo" checked>
+            <label for="noCapo">Without capo</label>
+          </li>
+          <li>
+            <input type="radio" name="capo" id="withCapo">
+            <label for="withCapo">With capo</label>
+          </li>
+          <input type="number" for="fretNumber" id="capoFret" min="0" value="0" disabled>
+        </ul>
+      </div>
+      <h3>Fret number: </h3>
       <input type="number" for="fretNumber" id="fretNumber" min="0" value="0">
-
     </form>
     <button class="btnTranslate">submit</button>
   </div>
