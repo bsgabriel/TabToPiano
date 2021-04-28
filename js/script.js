@@ -47,3 +47,16 @@ function translateKey (keyIndex, fretNumber, capoFret)
   }
   return keysArray[newKeyIndex];
 }
+
+const capoRadio = document.querySelectorAll('.checkCapo input[type="radio"]'); // Element that checks if capo is enabled
+
+capoRadio.forEach((radio) => {
+  radio.addEventListener('change', handleCapoRadioChange);
+});
+
+function handleCapoRadioChange(target)
+{
+  document.getElementById('capoFret').toggleAttribute('disabled');  // Turn on/off the capo input
+  document.getElementById('capoFret').value = "0";                  // If the there's no capo, the value is 0
+
+}
