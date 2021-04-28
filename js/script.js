@@ -1,12 +1,22 @@
-const keysArray = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
-const keyIndex = searchKeyIndex('G');
-const fretNumber = 6;
-const capoFret = 0;
+const keysArray = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']; // Array with all the notes
+const btnTranslate = document.querySelector('.btnTranslate');
+btnTranslate.addEventListener('click', handleButton);
+
+function handleButton()
+{
+  const selectedKey = document.querySelector('input[name="note"]:checked').value;   // Key selected in the radios
+  const keyIndex = searchKeyIndex(selectedKey);                                     // Index of the selected key (based of the vector)
+  const fretNumber = +document.getElementById('fretNumber').value;                  // Number of the note's fret (ex: E-----5----)
+  const capoFret = +document.getElementById('capoFret').value;                      // Number of capo's fret
+  const newKey = translateKey(keyIndex, fretNumber, capoFret);                      // The 'traslated' key
+  const newKeySpan = document.querySelector('.newKeySpan');                         // HTML element where is displayed the newKey
+  newKeySpan.textContent = newKey;
+}
 
 // Looks for the key's index inside the array
 function searchKeyIndex(key)
 {
-  let keyIndex = -1;
+  let keyIndex = 0;
   for (let i = 0; i < keysArray.length; i++)
   {
     if(keysArray[i] == key)
@@ -35,5 +45,5 @@ function translateKey (keyIndex, fretNumber, capoFret)
       newKeyIndex = 0;
     }
   }
-  return "Key in piano: " + keysArray[newKeyIndex];
+  return keysArray[newKeyIndex];
 }
